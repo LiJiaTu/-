@@ -1,7 +1,7 @@
 // 配置百度翻译API
 const BAIDU_API_URL = 'http://api.fanyi.baidu.com/api/trans/vip/translate';
-const APPID = '20250206002266624';
-const KEY = '9hyAWqnNgkvYRS4we61Q';
+const APPID = '你的APPID';
+const KEY = '你的秘钥';
 
 // 标准的MD5实现
 function md5(string) {
