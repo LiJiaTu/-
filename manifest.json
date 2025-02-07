@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "随便翻译器",
+  "version": "1.0.0",
+  "description": "一个简单易用的网页翻译工具",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self'"
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon32.png",
+    "128": "assets/icons/icon48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "http://api.fanyi.baidu.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon32.png",
+      "128": "assets/icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles/content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["assets/icons/*"],
+    "matches": ["<all_urls>"]
+  }]
+} 

@@ -1,0 +1,57 @@
+div[data-extension="random-translator"].translate-icon {
+  position: absolute;
+  z-index: 10000;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div[data-extension="random-translator"].translate-icon:hover {
+  transform: scale(1.1);
+}
+
+div[data-extension="random-translator"].translate-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+div[data-extension="random-translator"].translate-popup {
+  position: absolute;
+  z-index: 10000;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 16px;
+  min-width: 300px;
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+div[data-extension="random-translator"] .translate-container {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+div[data-extension="random-translator"] .source-text,
+div[data-extension="random-translator"] .target-text {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  min-height: 40px;
+  line-height: 1.5;
+}
+
+div[data-extension="random-translator"] .target-text {
+  background: #e8f5e9;
+}
